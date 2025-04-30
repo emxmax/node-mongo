@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const Person = require('./models/Person');
 const app = express();
 
-app.use(express.static('public'));
 app.use(express.json());
 
 const MONGO_URI = "mongodb+srv://emxmax:lolos12345@cluster0.o4vbzxy.mongodb.net/certus?retryWrites=true&w=majority&appName=Cluster0";
