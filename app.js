@@ -1,9 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Person = require('./models/Person');
+const cors = require('cors');
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 const MONGO_URI = "mongodb+srv://emxmax:lolos12345@cluster0.o4vbzxy.mongodb.net/certus?retryWrites=true&w=majority&appName=Cluster0";
 
