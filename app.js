@@ -5,7 +5,11 @@ const cors = require('cors');
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'http://127.0.0.1:5500', // solo ese origen podrá hacer requests
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+  }));
 
 const MONGO_URI = "mongodb+srv://emxmax:lolos12345@cluster0.o4vbzxy.mongodb.net/certus?retryWrites=true&w=majority&appName=Cluster0";
 
