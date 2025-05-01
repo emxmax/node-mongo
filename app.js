@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Person = require('./models/Person');
 const cors = require('cors');
 const app = express();
+require("dotenv").config();
 
 app.use(express.json());
 app.use(cors({
@@ -11,7 +12,7 @@ app.use(cors({
     credentials: true
   }));
 
-const MONGO_URI = "mongodb+srv://emxmax:lolos12345@cluster0.o4vbzxy.mongodb.net/certus?retryWrites=true&w=majority&appName=Cluster0";
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI).then(()=>{
     console.log("Se conecto exitosamente");
