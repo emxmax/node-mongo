@@ -24,7 +24,7 @@ app.post('/submit', async (req, res) => {
     try{
         const person = new Person(req.body);
         await person.save();
-        res.status(200).json({message: 'Se guardo correctamente'});
+        res.status(200).json({message: 'Se guardo correctament!'});
     }catch(err){
         console.error(err);
         res.status(500).json({message: 'Error al guardar'});
