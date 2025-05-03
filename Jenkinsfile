@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Test webhook') {
             steps {
-                echo '¡Webhook recibido! Construyendo rama develop.'
+                echo '¡Webhook recibido2! Construyendo rama develop.'
             }
         }
     }
